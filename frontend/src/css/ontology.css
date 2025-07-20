@@ -1,0 +1,86 @@
+/* FIXED SIDEBAR POSITION SO LINKS STAY PUT */
+.vertical-bar {
+    position: fixed;
+    width: 10%;
+    min-width: 120px;
+    height: 100vh;
+    background-color: #0b090a;
+  }
+
+/* CONTAINER THAT HOLDS RELATION LABELS */
+.labels {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* THE FONT STYLING FOR RELATION LABELS */
+.labels p {
+    padding: 20px 0 10px 0;
+    font-family: 'Josefin Sans';
+}
+
+.labels p:hover {
+    opacity: 0.7;
+}
+
+/* HOLDS THE DESCRIPTION SIDE AND THE EXAMPLE SIDE SO THEY CAN GO SIDE BY SIDE */
+.relation-description-holder {
+    display: table;
+    clear: both;
+}
+
+/* HOLDER FOR DESCRIPTION SIDE */
+.content-side {
+    position: relative;
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 40px;
+    float: left;
+}
+
+/* HOLDER FOR EXAMPLE SIDE */
+.example-side {
+    width: 35%;
+    height: 100%;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+/* THIS IS THE BLACK BOX WITH GREY BORDER */
+.relation-section {
+    background-color: #292929;
+    padding: 40px;
+    color: white;
+    margin: 0px;
+    position: relative;
+    border: 3px solid #0b090a;
+    margin-bottom: 50px;
+}
+
+.relation-section h1 {
+    font-family: "Inconsolata";
+    padding-bottom: 20px;
+}
+
+.relation-section p {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+
+.relation-section ul {
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
+
+
+
