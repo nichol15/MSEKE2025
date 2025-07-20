@@ -34,14 +34,14 @@ connectDB();
 // FUNCTION TO RUN WHEN ADDING NODES ********************************************************************************************
 // ******************************************************************************************************************************
 
-dropDatabase();
-const csv = "./csv_files/top.csv"
-insertDataFromCSV(csv);
+// dropDatabase();
+// const csv = "./csv_files/top.csv"
+// insertDataFromCSV(csv);
 
 
 // OTHER SET UP *****************************************************************************************************************
 // ******************************************************************************************************************************
-const PORT = process.env.PORT || 3500;          // this is the port where our server exists
+const PORT = process.env.PORT || 4000;          // this is the port where our server exists
 
 app.use(logger);         // this imports the logEvents file, where we created a logger for any request that goes through the site
 app.use(cors());         // cross origin resource sharing, not sure why we need this, I think for security but it's not set up
