@@ -4,6 +4,9 @@ FROM node:18
 # 2. Set working directory
 WORKDIR /app
 
+ARG REACT_APP_API_BASE_URL
+ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
+
 # 3. Copy package.json and install dependencies
 COPY package*.json ./
 RUN npm install
