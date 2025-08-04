@@ -30,5 +30,5 @@ jobs:
 
       - name: Build and push backend image
         run: |
-          docker build -t myprojectregistry.azurecr.io/backend-app:latest ./backend
-          docker push myprojectregistry.azurecr.io/backend-app:latest
+          docker build -t mseke.azurecr.io/backend-app:latest ./backend
+          docker push mseke.azurecr.io/backend-app:latest
