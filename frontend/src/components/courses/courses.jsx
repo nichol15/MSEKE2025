@@ -3,6 +3,7 @@ import React from 'react';
 import "../../css/courses.css";
 import { CourseSmallTextBox } from "../home/boxes.jsx";
 import { Overlap } from './overlap';
+import API_BASE_URL from '../../conf/api';
 
 // make a change
 const cdic = {
@@ -129,7 +130,7 @@ export default class Courses extends React.Component {
     // it calls the generate concepts function to display that list of courses
     fetchOverlap(courseIDsArray) { 
         let courseIDsString = courseIDsArray.toString();
-        const url = "http://localhost:3500/concept/";
+        const url = `${API_BASE_URL}/concept/`;
         fetch(url.concat(courseIDsString))
             .then((res) => {
                 if (res.status !== 200) {

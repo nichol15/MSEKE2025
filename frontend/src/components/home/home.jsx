@@ -13,6 +13,7 @@ import { faArrowsLeftRightToLine, faArrowLeft, faArrowRight } from '@fortawesome
 import { WrapSmallTextBox } from "./boxes";
 
 import { useParams } from "react-router-dom";
+import API_BASE_URL from '../../conf/api';
 
 /*
 const userparams = () => {
@@ -187,7 +188,7 @@ export default class Home extends React.Component {
   // When this function is called here, it calls the function in the home.jsx file, which is the < Home > class
   // which allows it to update the description in the < Description > class. 
   fetchNodeByID(id) { 
-    const url = "http://localhost:3500/node/";
+    const url = `${API_BASE_URL}/node/`;
     console.log("the uniqueID Passvdded in", id);
     fetch(url.concat(id))
         .then((res) => {
@@ -207,7 +208,7 @@ export default class Home extends React.Component {
   // the state data is updated with the new tree
   // this is called on the handle double click method
   fetchByID(id) { 
-    const url = "http://localhost:3500/tree/";
+    const url = `${API_BASE_URL}/tree/`;
     fetch(url.concat(id))
         .then((res) => {
             if (res.status !== 200) {
@@ -223,7 +224,7 @@ export default class Home extends React.Component {
   // FETCHES THE LINEAGE DATA
   // sets the state to the lineage
   fetchLineage(id) {
-    const url = "http://localhost:3500/grandparent/";
+    const url = `${API_BASE_URL}/grandparent/`;
     console.log("the uniqueID Passvdded in", id);
     fetch(url.concat(id))
         .then((res) => {

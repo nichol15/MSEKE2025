@@ -2,6 +2,7 @@ import React from "react";
 import { LinkVertical } from "@visx/shape";
 import { Group } from "@visx/group";
 import { hierarchy, Tree } from "@visx/hierarchy";
+import API_BASE_URL from '../../conf/api';
 
 //import "../../css/content.css";
 const colour_dict = {
@@ -26,7 +27,7 @@ class TreeContent extends React.Component {
   /*
   componentDidMount() { // function will get run after the render method
     const id = "function0"
-    const url = "http://localhost:3500/tree/";
+    const url = '${API_BASE_URL}/tree/';
     fetch(url.concat(id))
         .then((res) => {
             if (res.status !== 200) {

@@ -3,6 +3,7 @@ import "../../css/search.css";
 import SearchForm from './searchForm'; 
 import { WrapSmallTextBox } from '../home/boxes';
 import SearchResultDescription from './searchResultDescription';
+import API_BASE_URL from '../../conf/api';
 //import "../../css/style.css";
 // make a change
 
@@ -24,7 +25,7 @@ export default class Seach extends SearchForm {
     }
 
     showDescription(uniqueID) {
-        const url = "http://localhost:3500/node/";
+        const url = `${API_BASE_URL}/node/`;
         fetch(url.concat(uniqueID))
             .then((res) => {
                 if (res.status !== 200) {
@@ -64,7 +65,7 @@ export default class Seach extends SearchForm {
     }
 
     fetchNodesBySearch(input) { 
-        const url = "http://localhost:3500/search/";
+        const url = `${API_BASE_URL}/search/`;
         fetch(url.concat(input))
             .then((res) => {
                 if (res.status !== 200) {
