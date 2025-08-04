@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const jsdom = require('jsdom')
 const dom = new jsdom.JSDOM("")
 const jquery = require('jquery')(dom.window)
@@ -14,7 +15,12 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'REACT_APP_API_BASE_URL': JSON.stringify(process.env.REACT_APP_API_BASE_URL)
+            }
+        }),
     ],
     devServer: {
         historyApiFallback: true
