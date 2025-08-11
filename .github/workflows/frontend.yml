@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'frontend/**'
-      - '.github/workflows/frontend.yml'
+      - "frontend/**"
+      - ".github/workflows/frontend.yml"
 
 jobs:
   push-frontend:
@@ -30,5 +30,7 @@ jobs:
 
       - name: Build and push frontend image
         run: |
-          docker build -t mseke.azurecr.io/frontend-app:latest ./frontend
-          docker push mseke.azurecr.io/frontend-app:latest
+          docker build \
+            --build-arg REACT_APP_API_BASE_URL=https://msekebackend-gebgewggdaakancz.canadaeast-01.azurewebsites.net \
+            -t mseke.azurecr.io/frontend-app:latest ./frontend
+          docker push myacr.azurecr.io/frontend-app:latest
