@@ -127,6 +127,21 @@ app.get('/grandparent/:id', (req, res) => {
 // routes
 app.use(roots);
 
+port = process.env.PORT || 4000; // set the port to either the environment variable PORT or 4000
+// if port not set log an error and exit the process
+if (!port) {
+    console.error('PORT is not defined in the environment variables');
+    process.exit(1); // Exit the process with an error code
+}
+
+database_uri = process.env.DATABASE_URI;
+if (!database_uri) {
+    console.error('DATABASE_URI is not defined in the environment variables');
+    process.exit(1); // Exit the process with an error code
+}
+
+console.log(`attempting to connect to the database at ${process.env.DATABASE_URI}`);
+
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongoose')
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
