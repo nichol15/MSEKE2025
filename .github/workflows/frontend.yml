@@ -33,4 +33,4 @@ jobs:
           docker build \
             --build-arg REACT_APP_API_BASE_URL=https://msekebackend-gebgewggdaakancz.canadaeast-01.azurewebsites.net \
             -t mseke.azurecr.io/frontend-app:latest ./frontend
-          docker push myacr.azurecr.io/frontend-app:latest
+          docker push mseke.azurecr.io/frontend-app:latest
