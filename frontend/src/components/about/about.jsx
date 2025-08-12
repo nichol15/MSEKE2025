@@ -108,7 +108,7 @@ export default class About extends React.Component {
                                                 <h2>Glenn Hibbard</h2>
                                                 <h3>Position: Project Supervision</h3>
                                                 <p>
-                                                Professor Glenn Hibbard is the Chair of the Department of Materials Science & Engineering at U of T. Professor Hibbard initiated 
+                                                Professor Glenn Hibbard as the Chair of the Department of Materials Science & Engineering at U of T, initiated 
                                                 an effort to restructure the MSE curriculum, and identify overlaps in knowledge between courses, to create a more unified 
                                                 program for undergraduate students.
                                                 </p>
