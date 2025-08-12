@@ -6,6 +6,7 @@ import andrea from './../../images/andrea.png'; // Tell webpack this JS file use
 import nick from './../../images/nick.png';
 import nadia from './../../images/nadia.png';
 import hibbard from './../../images/hibbard.png';
+import eric from './../../images/eric.png';
 
 export default class About extends React.Component { 
     constructor() {
@@ -151,6 +152,23 @@ export default class About extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div className="side-by-side">
+                                            <div className="headshot">
+                                            <img src={eric} alt="Logo" />
+                                            </div>
+                                            <div className="people-description">
+                                                <div className="about-text">
+                                                <h2>Eric Nicholson</h2>
+                                                <h3>Position: Maintainer</h3>
+                                                <p>
+                                                Eric is a beamline scientist at the Canadian Neutron Beam Laboratory. His research interests include nuclear materials, 
+                                        and the structure of matter. Eric is currently serving as the web maintainer for this project.
+                                                </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
                                         <div>
                                     </div>
                                 </div>
